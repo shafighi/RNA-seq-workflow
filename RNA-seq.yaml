@@ -1,0 +1,84 @@
+dta_in: true
+dta_cuff_in: true
+fq1:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/2cells_1.fastq
+    class: File
+fq2:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/2cells_2.fastq
+    class: File
+indexBase:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/Danio_rerio.Zv9.66
+    class: File
+samName: hisat2-pe.sam
+fq3:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/2cells_1.fastq
+    class: File
+fq4:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/2cells_2.fastq
+    class: File
+indexBase_2:
+    path: /home/genomics/Toosi_Projects/rna-seq-workflow/Data/Danio_rerio.Zv9.66
+    class: File
+samName_2: hisat2-pe_2.sam
+samSortedName: sorted.sam
+samSortedName_2: sorted_2.sam
+move_script: 
+    path: move.sh
+    class: File
+dir1: cuff_out_1
+dir2: cuff_out_2
+merge_script:
+    path: merge.sh
+    class: File
+merged_gtf:
+    path: merged_asm/merged.gtf
+    class: File
+c_Rfile:
+    basename: cummeRbund.R
+    class: File
+    nameext: .R
+    nameroot: cummeRbund
+    path: cummeRbund.R
+c_gtfFile:
+    class: File
+    path: cuffdiff_output/cuffData.db
+    basename: cuffData.db
+c_genes_fpkm_tracking:
+    class: File
+    path: cuffdiff_output/genes.fpkm_tracking
+    basename: genes.fpkm_tracking
+c_read_groups_info:
+    class: File
+    path: cuffdiff_output/read_groups.info
+    basename: read_groups.info
+c_genes_count_tracking:
+    class: File
+    path: cuffdiff_output/genes.count_tracking
+    basename: genes.count_tracking
+c_genes_read_group_tracking:
+    class: File
+    path: cuffdiff_output/genes.read_group_tracking
+    basename: genes.read_group_tracking
+c_isoforms_fpkm_tracking:
+    class: File
+    path: cuffdiff_output/isoforms.fpkm_tracking
+    basename: isoforms.fpkm_tracking
+c_isoforms_read_group_tracking:
+    class: File
+    path: cuffdiff_output/isoforms.read_group_tracking
+    basename: isoforms.read_group_tracking
+c_isoforms_count_tracking:
+    class: File
+    path: cuffdiff_output/isoforms.count_tracking
+    basename: isoforms.count_tracking
+c_isoform_exp_diff:
+    class: File
+    path: cuffdiff_output/isoform_exp.diff
+    basename: isoform_exp.diff
+c_gene_exp_diff:
+    class: File
+    path: cuffdiff_output/gene_exp.diff
+    basename: gene_exp.diff
+c_cuffdiff_output: 
+    class: Directory
+    path: cuffdiff_output
