@@ -35,10 +35,8 @@ outputs:
     outputBinding:
       glob: 'genes.fpkm_tracking'
 arguments:
-  - '-o'
-  - /var/spool/cwl
-requirements:
-  - class: InlineJavascriptRequirement
+  - prefix: -o
+    valueFrom: $(runtime.outdir)
 hints:
   - class: DockerRequirement
     dockerPull: 'quay.io/biocontainers/cufflinks:2.2.1--py35_1'
